@@ -1,0 +1,17 @@
+.popup__span-error {
+  display: block;
+  margin: 0;
+  margin-left: 36px;
+  margin-top: 5px;
+  max-width: 358px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #ff0000;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__span-error {
+    margin-left: 22px;
+    max-width: 238px;
+  }
+}

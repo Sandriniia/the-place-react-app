@@ -1,0 +1,13 @@
+.popup__place-name {
+    margin: 0 calc((100% - 358px)/2);
+    padding-bottom: 13px;
+    border: 0;
+    outline-color: #00bfff;
+    color: #000;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__place-name {
+      margin: 0 calc((100% - 238px)/2);
+    }
+  }
