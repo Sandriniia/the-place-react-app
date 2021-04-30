@@ -43,7 +43,7 @@ function Login({ onLogin }) {
         ></input>
         <input
           id="login-password"
-          type="text"
+          type="password"
           placeholder="Пароль"
           name="password"
           value={data.password}
