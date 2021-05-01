@@ -91,16 +91,18 @@ const validateCreateUser = celebrate({
 
 const validateUpdateUser = celebrate({
   body: Joi.object().keys({
-    name: Joi.string().required().min(2).max(30).messages({
-      'string.min': 'Минимальная длина поля "name" - 2',
-      'string.max': 'Максимальная длина поля "name" - 30',
-      'string.required': 'Введите имя',
-    }),
-    about: Joi.string().required().min(2).max(30).messages({
-      'string.min': 'Минимальная длина поля "about" - 2',
-      'string.max': 'Максимальная длина поля "about" - 30',
-      'string.required': 'Расскажите о себе',
-    }),
+    name: Joi.string().required().min(2).max(30)
+      .messages({
+        'string.min': 'Минимальная длина поля "name" - 2',
+        'string.max': 'Максимальная длина поля "name" - 30',
+        'string.required': 'Введите имя',
+      }),
+    about: Joi.string().required().min(2).max(30)
+      .messages({
+        'string.min': 'Минимальная длина поля "about" - 2',
+        'string.max': 'Максимальная длина поля "about" - 30',
+        'string.required': 'Расскажите о себе',
+      }),
   }),
   headers: Joi.object()
     .keys({
@@ -168,11 +170,12 @@ const validateDeleteCard = celebrate({
 
 const validateCreateCard = celebrate({
   body: Joi.object().keys({
-    name: Joi.string().required().min(2).max(30).messages({
-      'string.min': 'Минимальная длина поля - 2',
-      'string.max': 'Максимальная длина поля - 30',
-      'string.required': 'Поле должно быть заполнено',
-    }),
+    name: Joi.string().required().min(2).max(30)
+      .messages({
+        'string.min': 'Минимальная длина поля - 2',
+        'string.max': 'Максимальная длина поля - 30',
+        'string.required': 'Поле должно быть заполнено',
+      }),
     link: Joi.string()
       .required()
       .custom((value, helpers) => {
