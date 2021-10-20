@@ -55,6 +55,7 @@ function App() {
   }
 
   function handleCardDelete(card) {
+    console.log(card);
     api
       .removeCard(card._id)
       .then(() => {
@@ -85,6 +86,7 @@ function App() {
   }
 
   function handleAddPlaceSubmit(data) {
+    console.log(data);
     api
       .addNewCard(data)
       .then((newCard) => {
@@ -96,6 +98,7 @@ function App() {
 
   useEffect(() => {
     if (isLogged) {
+      console.log(cards);
       api
         .getUserData()
         .then((data) => {
@@ -158,7 +161,8 @@ function App() {
   const checkToken = useCallback(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      api.getUserData(token)
+      api
+        .getUserData(token)
         .then((res) => {
           if (res) {
             setIsLogged(true);
@@ -186,15 +190,15 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <Header email={email} onLogout={onLogout} isLogged={isLogged} />
       <Switch>
-        <Route path="/sign-up">
+        <Route path='/sign-up'>
           <Register onRegister={handleRegister} checkToken={checkToken} />
         </Route>
-        <Route path="/sign-in">
+        <Route path='/sign-in'>
           <Login onLogin={handleLogin} checkToken={checkToken} />
         </Route>
         <ProtectedRoute
           exact
-          path="/"
+          path='/'
           component={Main}
           isLogged={isLogged}
           cards={cards}
@@ -206,7 +210,7 @@ function App() {
           onCardLike={handleCardLike}
         />
         <Route>
-          {isLogged ? <Redirect to="/"></Redirect> : <Redirect to="/sign-in"></Redirect>}
+          {isLogged ? <Redirect to='/'></Redirect> : <Redirect to='/sign-in'></Redirect>}
         </Route>
       </Switch>
       <Footer />
