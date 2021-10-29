@@ -28,31 +28,31 @@ function Login({ onLogin }) {
   }
 
   return (
-    <div className="log-in">
-      <form className="log-in__form" onSubmit={handleSubmit}>
-        <h2 className="log-in__title">Вход</h2>
+    <div className='log-in'>
+      <form className='log-in__form' onSubmit={handleSubmit}>
+        <h2 className='log-in__title'>Sign in</h2>
         <input
-          id="login-email"
-          type="email"
-          placeholder="Email"
-          name="email"
+          id='login-email'
+          type='email'
+          placeholder='email'
+          name='email'
           value={data.email}
           onChange={handleChange}
           required
-          className="log-in__input log-in__email-input"
+          className='log-in__input log-in__email-input'
         ></input>
         <input
-          id="login-password"
-          type="password"
-          placeholder="Пароль"
-          name="password"
+          id='login-password'
+          type='password'
+          placeholder='password'
+          name='password'
           value={data.password}
           onChange={handleChange}
           required
-          className="log-in__input"
+          className='log-in__input'
         ></input>
-        <button type="submit" className="log-in__button">
-          Войти
+        <button type='submit' className='log-in__button'>
+          Go
         </button>
       </form>
     </div>
