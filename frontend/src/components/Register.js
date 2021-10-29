@@ -27,11 +27,15 @@ function Register({ onRegister }) {
   return (
     <div className='register'>
       <form className='register__form' onSubmit={handleSubmit}>
-        <h2 className='register__title'>Регистрация</h2>
+        <h2 className='register__title'>
+          <span className='register__title-first-part'>Create your</span>
+          <span className='register__title-logo'> The Place </span>
+          <span className='register__title-last-part'>Account</span>
+        </h2>
         <input
           id='email'
           type='email'
-          placeholder='Email'
+          placeholder='email'
           name='email'
           value={data.email || ''}
           onChange={handleChange}
@@ -41,7 +45,7 @@ function Register({ onRegister }) {
         <input
           id='password'
           type='password'
-          placeholder='Пароль'
+          placeholder='password'
           name='password'
           value={data.password || ''}
           onChange={handleChange}
@@ -49,12 +53,12 @@ function Register({ onRegister }) {
           className='register__input'
         ></input>
         <button type='submit' className='register__button'>
-          Зарегистрироваться
+          Sign up
         </button>
         <div className='register__question-box'>
-          <p className='register__question'>Уже зарегистрированы?</p>
+          <p className='register__question'>Already have an account?</p>
           <Link to='' className='register__link'>
-            Войти
+            Sign in
           </Link>
         </div>
       </form>
