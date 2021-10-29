@@ -31,40 +31,40 @@ function EditProfilePopup(props) {
 
   return (
     <PopupWithForm
-      title="Редактировать профиль"
-      name="type_edit"
+      title='Edit profile'
+      name='type_edit'
       isOpen={props.isOpen}
       onClose={props.onClose}
       onSubmit={handleSubmit}
       isDisabled={props.isDisabled}
-      submitButton={'Сохранить'}
+      submitButton={'Save'}
     >
       <input
-        id="name-card"
-        type="text"
-        placeholder="Жак-Ив Кусто"
-        name="name"
+        id='name-card'
+        type='text'
+        placeholder="Jeanne d'Arc"
+        name='name'
         value={userName || ''}
         onChange={handleUserNameChange}
-        className="popup__name popup__input"
+        className='popup__name popup__input'
         required
         minLength={2}
         maxLength={40}
       />
-      <span className="popup__span-error" id="name-card-error" />
+      <span className='popup__span-error' id='name-card-error' />
       <input
-        id="description-card"
-        type="text"
-        placeholder="Исследователь океана"
-        name="about"
+        id='description-card'
+        type='text'
+        placeholder='What can you tell about yourself?'
+        name='about'
         value={description || ''}
         onChange={handleDescriptionChange}
-        className="popup__description popup__input"
+        className='popup__description popup__input'
         required
         minLength={2}
         maxLength={200}
       />
-      <span className="popup__span-error" id="description-card-error" />
+      <span className='popup__span-error' id='description-card-error' />
     </PopupWithForm>
   );
 }
