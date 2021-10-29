@@ -1,7 +1,8 @@
 .header__logo {
   display: block;
   margin: 0;
-  margin-bottom: 41px;
+  color: #b01030;
+  font-size: 27px;
 }
 
 @media screen and (max-width: 767px) {
