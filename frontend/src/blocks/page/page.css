@@ -1,6 +1,11 @@
+body {
+  background-color: #000;
+}
+
 #root {
   min-width: 1280px;
   min-width: 320px;
+  height: 100vh;
   margin: 0 auto;
   padding: 15px;
   box-sizing: border-box;
